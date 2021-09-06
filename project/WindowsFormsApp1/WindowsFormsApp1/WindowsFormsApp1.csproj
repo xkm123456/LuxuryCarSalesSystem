@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{228ABBE7-1100-47DA-B4B0-B6F741021422}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=127be25a6db25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="DLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DLForm.designer.cs">
+      <DependentUpon>DLForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="基础资料\基础资料-供商管理\InfoInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\基础资料-供商管理\InfoInsertForm.Designer.cs">
+      <DependentUpon>InfoInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\基础资料-供商管理\InfoLookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\基础资料-供商管理\InfoLookForm.Designer.cs">
+      <DependentUpon>InfoLookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\基础资料-供商管理\InfoWhForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\基础资料-供商管理\InfoWhForm.Designer.cs">
+      <DependentUpon>InfoWhForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\基础资料-员工管理\StaffInfoFindForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\基础资料-员工管理\StaffInfoFindForm.Designer.cs">
+      <DependentUpon>StaffInfoFindForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\基础资料-员工管理\StaffInfoWhForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\基础资料-员工管理\StaffInfoWhForm.Designer.cs">
+      <DependentUpon>StaffInfoWhForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\基础资料-员工管理\StaffInfoInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\基础资料-员工管理\StaffInfoInsertForm.Designer.cs">
+      <DependentUpon>StaffInfoInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\基础资料-商品管理\GoodsInfoInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\基础资料-商品管理\GoodsInfoInsertForm.Designer.cs">
+      <DependentUpon>GoodsInfoInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\基础资料-商品管理\GoodsInfoLookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\基础资料-商品管理\GoodsInfoLookForm.Designer.cs">
+      <DependentUpon>GoodsInfoLookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\基础资料-商品管理\GoodsInfoWhForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\基础资料-商品管理\GoodsInfoWhForm.Designer.cs">
+      <DependentUpon>GoodsInfoWhForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\基础资料-客户管理\CustInfoInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\基础资料-客户管理\CustInfoInsertForm.Designer.cs">
+      <DependentUpon>CustInfoInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\基础资料-客户管理\CustInfoLookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\基础资料-客户管理\CustInfoLookForm.Designer.cs">
+      <DependentUpon>CustInfoLookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\基础资料-客户管理\CustInfoWhForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\基础资料-客户管理\CustInfoWhForm.Designer.cs">
+      <DependentUpon>CustInfoWhForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="库存盘点\KuKunPandian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="库存盘点\KuKunPandian.Designer.cs">
+      <DependentUpon>KuKunPandian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="查询统计\销售出库统计\SaleGoodsCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="查询统计\销售出库统计\SaleGoodsCount.Designer.cs">
+      <DependentUpon>SaleGoodsCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统关于\XiTongGy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统关于\XiTongGy.Designer.cs">
+      <DependentUpon>XiTongGy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="查询统计\进货入库统计\IntoGoodsCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="查询统计\进货入库统计\IntoGoodsCount.Designer.cs">
+      <DependentUpon>IntoGoodsCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="销售出库\BuyOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="销售出库\BuyOut.Designer.cs">
+      <DependentUpon>BuyOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="采购计划\BuyPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="采购计划\BuyPlan.Designer.cs">
+      <DependentUpon>BuyPlan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DLForm.resx">
+      <DependentUpon>DLForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="基础资料\基础资料-供商管理\InfoInsertForm.resx">
+      <DependentUpon>InfoInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\基础资料-供商管理\InfoLookForm.resx">
+      <DependentUpon>InfoLookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\基础资料-供商管理\InfoWhForm.resx">
+      <DependentUpon>InfoWhForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\基础资料-员工管理\StaffInfoFindForm.resx">
+      <DependentUpon>StaffInfoFindForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\基础资料-员工管理\StaffInfoInsertForm.resx">
+      <DependentUpon>StaffInfoInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\基础资料-员工管理\StaffInfoWhForm.resx">
+      <DependentUpon>StaffInfoWhForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\基础资料-商品管理\GoodsInfoInsertForm.resx">
+      <DependentUpon>GoodsInfoInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\基础资料-商品管理\GoodsInfoLookForm.resx">
+      <DependentUpon>GoodsInfoLookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\基础资料-商品管理\GoodsInfoWhForm.resx">
+      <DependentUpon>GoodsInfoWhForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\基础资料-客户管理\CustInfoInsertForm.resx">
+      <DependentUpon>CustInfoInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\基础资料-客户管理\CustInfoLookForm.resx">
+      <DependentUpon>CustInfoLookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\基础资料-客户管理\CustInfoWhForm.resx">
+      <DependentUpon>CustInfoWhForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="库存盘点\KuKunPandian.resx">
+      <DependentUpon>KuKunPandian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="查询统计\销售出库统计\SaleGoodsCount.resx">
+      <DependentUpon>SaleGoodsCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统关于\XiTongGy.resx">
+      <DependentUpon>XiTongGy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="查询统计\进货入库统计\IntoGoodsCount.resx">
+      <DependentUpon>IntoGoodsCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="销售出库\BuyOut.resx">
+      <DependentUpon>BuyOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="采购计划\BuyPlan.resx">
+      <DependentUpon>BuyPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
